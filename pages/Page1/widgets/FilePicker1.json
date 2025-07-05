@@ -1,5 +1,7 @@
 {
-  "allowedFileTypes": [],
+  "allowedFileTypes": [
+    ".png"
+  ],
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 21,
@@ -13,6 +15,7 @@
       "key": "borderRadius"
     }
   ],
+  "dynamicTriggerPathList": [],
   "dynamicTyping": true,
   "fileDataType": "Base64",
   "files": [],
@@ -22,7 +25,7 @@
   "isRequired": false,
   "isVisible": true,
   "key": "5dzwfmeobr",
-  "label": "Select Files",
+  "label": "FilePicker1",
   "leftColumn": 7,
   "maxFileSize": 5,
   "maxNumFiles": 1,
