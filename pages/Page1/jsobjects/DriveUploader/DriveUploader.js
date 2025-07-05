@@ -1,7 +1,7 @@
 export default {
 	async uploadAllFiles () {
 		for (let file of FilePicker1.files) {
-			const base64 = file.data.split(",")[1]; // buang prefix "data:image/png;base64,"
+			const base64 = file.data.split(",")[1]; // bersihkan prefix
 
 			const body = `--boundary123
 Content-Type: application/json; charset=UTF-8
@@ -19,13 +19,15 @@ ${base64}
 --boundary123--`;
 
 			try {
-				await uploadToDrive.run({ body }); // Authorization dan headers otomatis dari datasource
-			} catch (e) {
+				// ⚠️ WAJIB pakai await agar upload satu per satu
+				await uploadToDrive.run({ body });
+				console.log(`Berhasil upload: ${file.name}`);
+			} catch (err) {
 				showAlert(`Gagal upload: ${file.name}`, "error");
-				console.error(e);
+				console.error(err);
 			}
 		}
 
-		showAlert("Semua file berhasil di-upload!", "success");
+		showAlert("Semua file selesai di-upload!", "success");
 	}
 }
