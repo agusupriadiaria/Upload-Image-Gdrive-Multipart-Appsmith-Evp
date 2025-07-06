@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6868e929f0d3c907f8af9817_4eb00f61-0045-4c88-99ac-0ac23e90526b",
-  "id": "Page1_UploadAPI_1",
+  "gitSyncId": "6868e929f0d3c907f8af9817_ac0f572b-4e8b-4bc8-80e4-0ce4a9a21791",
+  "id": "Page1_ShareFile",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,33 +11,28 @@
           "value": "text/plain"
         }
       ],
-      "body": "--boundary123\nContent-Type: application/json; charset=UTF-8\n\n{\n  \"name\": \"{{FilePicker1.files[0].name}}\",\n  \"parents\": [\"1vzCZ3XpjPdPgACYNy97TQbmN21m5AFvr\"]\n}\n\n--boundary123\nContent-Type: {{FilePicker1.files[0].type}}\nContent-Transfer-Encoding: base64\n\n{{ FilePicker1.files[0].data.split(\",\")[1] }}\n\n--boundary123--",
+      "body": "{\n  \"role\": \"reader\",\n  \"type\": \"anyone\"\n}",
       "bodyFormData": [],
-      "encodeParamsToggle": false,
+      "encodeParamsToggle": true,
       "formData": {
         "apiContentType": "text/plain"
       },
       "headers": [
         {
           "key": "Content-Type",
-          "value": "multipart/related; boundary=boundary123"
+          "value": "application/json"
         }
       ],
       "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/upload/drive/v3/files",
+      "path": "/drive/v3/files/{{UploadAPI_1.data.id}}/permissions",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
-      "queryParameters": [
-        {
-          "key": "uploadType",
-          "value": "multipart"
-        }
-      ],
+      "queryParameters": [],
       "timeoutInMillisecond": 10000
     },
     "confirmBeforeExecute": false,
@@ -49,12 +44,12 @@
     },
     "dynamicBindingPathList": [
       {
-        "key": "body"
+        "key": "path"
       }
     ],
-    "name": "UploadAPI_1",
+    "name": "ShareFile",
     "pageId": "Page1",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
