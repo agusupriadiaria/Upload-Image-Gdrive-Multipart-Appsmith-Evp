@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "6868e929f0d3c907f8af9817_80fccd89-bf5a-4566-b79a-cf8c5fdea7e3",
-  "id": "Page1_UploadAPI_1",
+  "gitSyncId": "686a76fba709ab3ddc753c15_18c2ca82-8f57-4f73-b6d6-0ab67a13d691",
+  "id": "Page1_ShareFile_1",
   "pluginId": "restapi-plugin",
   "pluginType": "API",
   "unpublishedAction": {
@@ -11,33 +11,28 @@
           "value": "text/plain"
         }
       ],
-      "body": "--boundary123\nContent-Type: application/json; charset=UTF-8\n\n{\n  \"name\": \"{{FilePicker1.files[1].name}}\",\n  \"parents\": [\"1vzCZ3XpjPdPgACYNy97TQbmN21m5AFvr\"]\n}\n\n--boundary123\nContent-Type: {{FilePicker1.files[1].type}}\nContent-Transfer-Encoding: base64\n\n{{ FilePicker1.files[1].data.split(\",\")[1] }}\n\n--boundary123--",
+      "body": "{\n  \"role\": \"reader\",\n  \"type\": \"anyone\"\n}",
       "bodyFormData": [],
-      "encodeParamsToggle": false,
+      "encodeParamsToggle": true,
       "formData": {
         "apiContentType": "text/plain"
       },
       "headers": [
         {
           "key": "Content-Type",
-          "value": "multipart/related; boundary=boundary123"
+          "value": "application/json"
         }
       ],
       "httpMethod": "POST",
       "httpVersion": "HTTP11",
       "paginationType": "NONE",
-      "path": "/upload/drive/v3/files",
+      "path": "/drive/v3/files/{{UploadAPI_1.data.id}}/permissions",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
-      "queryParameters": [
-        {
-          "key": "uploadType",
-          "value": "multipart"
-        }
-      ],
+      "queryParameters": [],
       "timeoutInMillisecond": 10000
     },
     "confirmBeforeExecute": false,
@@ -49,12 +44,12 @@
     },
     "dynamicBindingPathList": [
       {
-        "key": "body"
+        "key": "path"
       }
     ],
-    "name": "UploadAPI_1",
+    "name": "ShareFile_1",
     "pageId": "Page1",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
