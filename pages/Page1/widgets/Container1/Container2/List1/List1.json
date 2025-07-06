@@ -104,6 +104,8 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 4,
   "needsErrorInfo": false,
+  "originalBottomRow": 44,
+  "originalTopRow": 4,
   "pageSize": 2,
   "parentColumnSpace": 9.3447265625,
   "parentId": "h0r3z7mfcf",

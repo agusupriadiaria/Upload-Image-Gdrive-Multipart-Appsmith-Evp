@@ -36,7 +36,7 @@
   "mobileRightColumn": 28,
   "mobileTopRow": 28,
   "needsErrorInfo": false,
-  "onClick": "{{uploadToDrive.run()}}",
+  "onClick": "{{UploadAPI_1.run()}}",
   "originalBottomRow": 34,
   "originalTopRow": 29,
   "parentColumnSpace": 20.25,
