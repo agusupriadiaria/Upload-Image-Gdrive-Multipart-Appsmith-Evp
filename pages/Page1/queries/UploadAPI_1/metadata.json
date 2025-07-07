@@ -54,7 +54,7 @@
     ],
     "name": "UploadAPI_1",
     "pageId": "Page1",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }

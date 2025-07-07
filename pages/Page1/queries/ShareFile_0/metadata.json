@@ -13,7 +13,7 @@
       ],
       "body": "{\n  \"role\": \"reader\",\n  \"type\": \"anyone\"\n}",
       "bodyFormData": [],
-      "encodeParamsToggle": true,
+      "encodeParamsToggle": false,
       "formData": {
         "apiContentType": "text/plain"
       },
@@ -29,7 +29,7 @@
       "path": "/drive/v3/files/{{UploadAPI_0.data.id}}/permissions",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "queryParameters": [],
