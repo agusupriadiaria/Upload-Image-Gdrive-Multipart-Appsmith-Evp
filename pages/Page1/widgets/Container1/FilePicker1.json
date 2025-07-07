@@ -1,5 +1,7 @@
 {
-  "allowedFileTypes": [],
+  "allowedFileTypes": [
+    "*"
+  ],
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 4,
@@ -25,8 +27,8 @@
   "key": "5dzwfmeobr",
   "label": "Select Files Here !!!",
   "leftColumn": 0,
-  "maxFileSize": 5,
-  "maxNumFiles": "5",
+  "maxFileSize": "10",
+  "maxNumFiles": "10",
   "minWidth": 120,
   "mobileBottomRow": 21,
   "mobileLeftColumn": 7,
