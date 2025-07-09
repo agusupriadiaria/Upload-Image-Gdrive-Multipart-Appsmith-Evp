@@ -37,6 +37,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton3.onClick"
     }
   ],
   "groupButtons": {
@@ -82,6 +85,7 @@
           "widgetId": ""
         }
       },
+      "onClick": "{{ShareNonPublic_0.run()}}",
       "placement": "CENTER",
       "widgetId": ""
     }

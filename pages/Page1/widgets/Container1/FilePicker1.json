@@ -11,6 +11,9 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "maxNumFiles"
     }
   ],
   "dynamicTriggerPathList": [],
@@ -26,7 +29,7 @@
   "label": "Select Files Here !!!",
   "leftColumn": 0,
   "maxFileSize": "10",
-  "maxNumFiles": "10",
+  "maxNumFiles": "{{ Input1.text.trim() === \"\" ? 5 : 1 }}",
   "minWidth": 120,
   "mobileBottomRow": 21,
   "mobileLeftColumn": 7,
