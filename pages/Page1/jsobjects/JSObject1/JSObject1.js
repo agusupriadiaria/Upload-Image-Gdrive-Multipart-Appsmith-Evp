@@ -1,48 +1,51 @@
 export default {
-  async uploadAndShare() {
-    // 1. Jalankan upload
-    await UploadAPI_0.run();
+	async uploadAndShare() {
+		// 1. Jalankan upload ke Google Drive
+		await UploadAPI_0.run();
 
-    // 2. Ambil ID yang valid dari .data dan simpan sekali
-    const fileId = UploadAPI_0.data.id;
+		// 2. Ambil ID file yang valid dari .data
+		const fileId = UploadAPI_0.data.id;
 
-    // 3. Buat URL Google Drive (langsung dari variabel, bukan UploadAPI_0.data lagi)
-    const driveUrl = "https://drive.google.com/file/d/" + fileId + "/view?usp=sharing";
+		// 3. Buat link Google Drive dari ID
+		const driveUrl = "https://drive.google.com/file/d/" + fileId + "/view?usp=sharing";
 
-    // 4. Ambil input
-    const input = Input1.text.trim();
+		// 4. Ambil input dari user (bisa kosong atau berisi email)
+		const input = Input1.text.trim();
 
-    // 5. Share logic
-    if (!input) {
-      await ShareNonPublic_0.run({
-        role: "reader",
-        type: "anyone"
-      });
+		// 5. Jika input kosong → share ke publik (anyone can view)
+		if (!input) {
+			await ShareNonPublic_0.run({
+				role: "reader",
+				type: "anyone"
+			});
 
-      // 6. Gunakan driveUrl dari variabel, jangan ulang akses UploadAPI_0.data.id
-      return tinyUrl_nonPub.run({
-        url: driveUrl,
-        domain: "tinyurl.com"
-      });
-    }
+			return tinyUrl_nonPub.run({
+				url: driveUrl,
+				domain: "tinyurl.com"
+			});
+		}
 
-    // 7. Jika ada email
-    const emails = input.split(",").map(e => e.trim());
+		// 6. Kalau ada input → ambil semua email dan tambahkan email user login
+		const emails = [
+			...input.split(",").map(e => e.trim()),
+			appsmith.user.email
+		];
 
-    await Promise.all(
-      emails.map(email =>
-        ShareNonPublic_0.run({
-          role: "reader",
-          type: "user",
-          emailAddress: email
-        })
-      )
-    );
+		// 7. Share file ke semua email satu per satu
+		await Promise.all(
+			emails.map(email =>
+								 ShareNonPublic_0.run({
+				role: "reader",
+				type: "user",
+				emailAddress: email
+			})
+								)
+		);
 
-    // 8. Gunakan driveUrl dari variabel (bukan UploadAPI_0.data.id lagi)
-    return tinyUrl_nonPub.run({
-      url: driveUrl,
-      domain: "tinyurl.com"
-    });
-  }
+		// 8. Setelah share selesai, buat short link TinyURL
+		return tinyUrl_nonPub.run({
+			url: driveUrl,
+			domain: "tinyurl.com"
+		});
+	}
 }
