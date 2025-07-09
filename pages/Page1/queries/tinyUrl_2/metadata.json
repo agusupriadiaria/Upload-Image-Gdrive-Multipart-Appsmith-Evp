@@ -13,7 +13,7 @@
       ],
       "body": "{\n  \"url\": {{ Text7Copy.text }},\n  \"domain\": \"tinyurl.com\"\n}\n",
       "bodyFormData": [],
-      "encodeParamsToggle": true,
+      "encodeParamsToggle": false,
       "formData": {
         "apiContentType": "application/json"
       },
@@ -33,7 +33,7 @@
       "path": "/create",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "queryParameters": [],
@@ -55,7 +55,7 @@
     ],
     "name": "tinyUrl_2",
     "pageId": "Page1",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }
