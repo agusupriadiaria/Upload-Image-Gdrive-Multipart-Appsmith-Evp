@@ -85,7 +85,7 @@
           "widgetId": ""
         }
       },
-      "onClick": "{{ShareNonPublic_0.run()}}",
+      "onClick": "{{JSObject1.uploadAndShare();}}",
       "placement": "CENTER",
       "widgetId": ""
     }
