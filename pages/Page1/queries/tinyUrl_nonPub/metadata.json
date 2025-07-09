@@ -55,7 +55,7 @@
     ],
     "name": "tinyUrl_nonPub",
     "pageId": "Page1",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": false
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": true
   }
 }
