@@ -51,7 +51,7 @@
       "isVisible": "{{ Input1.text == \"\" }}",
       "label": "Share to Public",
       "menuItems": {},
-      "onClick": "{{UploadAPI_0.run().then(() => {\n  ShareFile_0.run();\n});\nUploadAPI_1.run().then(() => {\n  ShareFile_1.run();\n});\nUploadAPI_2.run().then(() => {\n  ShareFile_2.run();\n});\nUploadAPI_3.run().then(() => {\n  ShareFile_3.run();\n});\nUploadAPI_4.run().then(() => {\n  ShareFile_4.run();\n});\nUploadAPI_5.run().then(() => {\n  ShareFile_5.run();\n});\nUploadAPI_6.run().then(() => {\n  ShareFile_6.run();\n});\nUploadAPI_7.run().then(() => {\n  ShareFile_7.run();\n});\nUploadAPI_8.run().then(() => {\n  ShareFile_8.run();\n});\nUploadAPI_9.run().then(() => {\n  ShareFile_9.run();\n});}}",
+      "onClick": "{{UploadAPI_0.run().then(() => {\n  ShareFile_0.run().then(tinyUrl_0.run);\n});\nUploadAPI_1.run().then(() => {\n  ShareFile_1.run().then(tinyUrl_1.run);\n});\nUploadAPI_2.run().then(() => {\n  ShareFile_2.run().then(tinyUrl_2.run);\n});\nUploadAPI_3.run().then(() => {\n  ShareFile_3.run().then(tinyUrl_3.run);\n});\nUploadAPI_4.run().then(() => {\n  ShareFile_4.run().then(tinyUrl_4.run);\n});}}",
       "placement": "CENTER",
       "widgetId": ""
     },

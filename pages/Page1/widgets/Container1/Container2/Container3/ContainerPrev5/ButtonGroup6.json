@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 8,
+  "bottomRow": 9,
   "boxShadow": "none",
   "buttonVariant": "PRIMARY",
   "childStylesheet": {
@@ -51,10 +51,10 @@
       "id": "groupButton1",
       "index": 0,
       "isDisabled": false,
-      "isVisible": "{{Text3.text !== \"\"}}",
+      "isVisible": "{{Text11.text !== \"\"}}",
       "label": "Copy Link",
       "menuItems": {},
-      "onClick": "{{ \n  copyToClipboard(Text3.text); \n  showAlert(\"Link copied!\", \"success\"); \n}}",
+      "onClick": "{{ \n  copyToClipboard(Text11.text); \n  showAlert(\"Link copied!\", \"success\"); \n}}",
       "placement": "CENTER",
       "widgetId": ""
     },
@@ -65,11 +65,11 @@
       "index": 1,
       "isDisabled": false,
       "isSeparator": false,
-      "isVisible": "{{Text3.text === \"\"}}",
+      "isVisible": "{{Text11.text === \"\"}}",
       "itemType": "BUTTON",
       "label": "Retry",
       "menuItems": {},
-      "onClick": "{{tinyUrl_0.run()}}",
+      "onClick": "{{tinyUrl_4.run()}}",
       "placement": "CENTER",
       "variant": "filled",
       "widgetId": "j2jcpmfwpe"
@@ -88,14 +88,14 @@
   "needsErrorInfo": false,
   "orientation": "vertical",
   "parentColumnSpace": 19,
-  "parentId": "v0q4npggdz",
+  "parentId": "qm4tjaoulc",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
-  "topRow": 4,
+  "topRow": 5,
   "type": "BUTTON_GROUP_WIDGET",
   "version": 1,
-  "widgetId": "9lpmvhekxu",
-  "widgetName": "ButtonGroup2"
+  "widgetId": "ive0oqck3d",
+  "widgetName": "ButtonGroup6"
 }

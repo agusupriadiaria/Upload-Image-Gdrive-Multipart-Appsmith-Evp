@@ -1,0 +1,4 @@
+{
+  "url": {{ Text9Copy.text }},
+  "domain": "tinyurl.com"
+}

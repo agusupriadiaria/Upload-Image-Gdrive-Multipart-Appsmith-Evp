@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 35,
   "shouldTruncate": false,
-  "text": "https://drive.google.com/file/d/{{UploadAPI_1.data.id}}/view",
+  "text": "{{tinyUrl_1.data.data.tiny_url}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 5,
