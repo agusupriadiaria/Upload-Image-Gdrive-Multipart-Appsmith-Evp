@@ -1,4 +1,4 @@
 {
-  "url": {{ Text3Copy2.text }},
+  "url": "{{this.params.url}}",
   "domain": "tinyurl.com"
 }

@@ -1,45 +1,48 @@
 export default {
-	async uploadAndShare() {
-		try {
-			// 1. Upload file ke Drive
-			const uploaded = await UploadAPI_0.run();
-			const fileId = uploaded.id;
+  async uploadAndShare() {
+    // 1. Jalankan upload
+    await UploadAPI_0.run();
 
-			// 2. Ambil email dari Input
-			const input = Input1.text.trim();
+    // 2. Ambil ID yang valid dari .data dan simpan sekali
+    const fileId = UploadAPI_0.data.id;
 
-			// 3. Share ke publik jika kosong
-			if (!input) {
-				await ShareNonPublic_0.run({
-					role: "reader",
-					type: "anyone"
-				});
-			} else {
-				// 4. Jika isi → kirim satu per satu
-				const emails = input.split(",").map(e => e.trim());
-				await Promise.all(
-					emails.map(email =>
-										 ShareNonPublic_0.run({
-						role: "reader",
-						type: "user",
-						emailAddress: email
-					})
-										)
-				);
-			}
+    // 3. Buat URL Google Drive (langsung dari variabel, bukan UploadAPI_0.data lagi)
+    const driveUrl = "https://drive.google.com/file/d/" + fileId + "/view?usp=sharing";
 
-			// 5. Jika semua sudah running ok, jalankan tinyUrl_nonPub api post
-			await tinyUrl_nonPub.run();
+    // 4. Ambil input
+    const input = Input1.text.trim();
 
-			// Anda bisa menambahkan return nilai atau notifikasi sukses di sini jika diperlukan
-			return "Proses upload, share, dan pembuatan TinyURL berhasil!";
+    // 5. Share logic
+    if (!input) {
+      await ShareNonPublic_0.run({
+        role: "reader",
+        type: "anyone"
+      });
 
-		} catch (error) {
-			// Menangani error jika ada langkah yang gagal
-			console.error("Terjadi error:", error);
-			// Anda bisa menampilkan pesan error kepada pengguna di sini
-			showAlert("Terjadi kesalahan dalam proses.", "error");
-			throw error; // Meneruskan error agar bisa ditangani di tempat lain jika diperlukan
-		}
-	}
+      // 6. Gunakan driveUrl dari variabel, jangan ulang akses UploadAPI_0.data.id
+      return tinyUrl_nonPub.run({
+        url: driveUrl,
+        domain: "tinyurl.com"
+      });
+    }
+
+    // 7. Jika ada email
+    const emails = input.split(",").map(e => e.trim());
+
+    await Promise.all(
+      emails.map(email =>
+        ShareNonPublic_0.run({
+          role: "reader",
+          type: "user",
+          emailAddress: email
+        })
+      )
+    );
+
+    // 8. Gunakan driveUrl dari variabel (bukan UploadAPI_0.data.id lagi)
+    return tinyUrl_nonPub.run({
+      url: driveUrl,
+      domain: "tinyurl.com"
+    });
+  }
 }

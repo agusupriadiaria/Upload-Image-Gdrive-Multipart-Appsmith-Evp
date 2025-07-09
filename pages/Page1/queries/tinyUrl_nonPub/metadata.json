@@ -11,7 +11,7 @@
           "value": "application/json"
         }
       ],
-      "body": "{\n  \"url\": {{ Text3Copy2.text }},\n  \"domain\": \"tinyurl.com\"\n}\n",
+      "body": "{\n  \"url\": \"{{this.params.url}}\",\n  \"domain\": \"tinyurl.com\"\n}\n",
       "bodyFormData": [],
       "encodeParamsToggle": false,
       "formData": {
