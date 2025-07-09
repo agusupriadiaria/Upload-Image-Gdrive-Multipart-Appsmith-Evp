@@ -43,7 +43,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 35,
   "shouldTruncate": false,
   "text": "{{FilePicker1.files[1].name}}",
   "textAlign": "LEFT",

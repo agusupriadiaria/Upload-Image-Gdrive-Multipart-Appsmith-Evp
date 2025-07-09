@@ -41,7 +41,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 35,
   "shouldTruncate": false,
   "text": "https://drive.google.com/file/d/{{UploadAPI_3.data.id}}/view",
   "textAlign": "LEFT",

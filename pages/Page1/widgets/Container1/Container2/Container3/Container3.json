@@ -90,7 +90,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 32,
+  "rightColumn": 64,
   "shouldScrollContents": true,
   "topRow": 8,
   "type": "CONTAINER_WIDGET",
