@@ -28,7 +28,7 @@
   "key": "5dzwfmeobr",
   "label": "Select Files Here !!!",
   "leftColumn": 0,
-  "maxFileSize": "10",
+  "maxFileSize": "5",
   "maxNumFiles": "{{ Input1.text.trim() === \"\" ? 5 : 1 }}",
   "minWidth": 120,
   "mobileBottomRow": 21,

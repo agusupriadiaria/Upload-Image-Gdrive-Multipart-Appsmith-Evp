@@ -15,7 +15,16 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    }
+  ],
   "errorMessage": "Format harus berupa list email yang dipisahkan dengan tanda \",\"",
   "iconAlign": "left",
   "inputType": "EMAIL",
@@ -39,6 +48,7 @@
   "mobileRightColumn": 50,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
+  "onTextChanged": "{{ \n  FilePicker1.files.length > 1 && Input1.text.trim() !== \"\" \n    ? showAlert(\"Jika mengisi email, hanya boleh upload 1 file.\", \"error\") \n    : null \n}}\n",
   "parentColumnSpace": 19.9375,
   "parentId": "trif218kvk",
   "parentRowSpace": 10,
