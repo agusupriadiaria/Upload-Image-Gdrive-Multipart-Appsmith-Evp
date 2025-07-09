@@ -51,7 +51,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 35,
   "shouldTruncate": false,
-  "text": "{{tinyUrl_0.data.data.tiny_url}}",
+  "text": "{{tinyUrl_nonPub.data.data.tiny_url}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 8,
