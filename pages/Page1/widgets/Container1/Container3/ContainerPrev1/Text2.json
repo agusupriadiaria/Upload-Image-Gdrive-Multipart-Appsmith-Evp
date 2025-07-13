@@ -1,7 +1,9 @@
 {
   "animateLoading": true,
+  "backgroundColor": "",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 22,
+  "bottomRow": 4,
+  "disableLink": true,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -22,7 +24,7 @@
   "fontSize": "0.875rem",
   "fontStyle": "",
   "isLoading": false,
-  "isVisible": false,
+  "isVisible": true,
   "key": "c1na6pvism",
   "leftColumn": 13,
   "maxDynamicHeight": 9000,
@@ -33,8 +35,8 @@
   "mobileRightColumn": 29,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 22,
-  "originalTopRow": 17,
+  "originalBottomRow": 16,
+  "originalTopRow": 0,
   "overflow": "NONE",
   "parentColumnSpace": 9.0322265625,
   "parentId": "v0q4npggdz",
@@ -43,13 +45,13 @@
   "responsiveBehavior": "fill",
   "rightColumn": 35,
   "shouldTruncate": false,
-  "text": "https://drive.google.com/file/d/{{UploadAPI_0.data.id}}/view",
+  "text": "{{FilePicker1.files[0].name}}",
   "textAlign": "LEFT",
-  "textColor": "#231F20",
-  "topRow": 17,
+  "textColor": "#231f20",
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "earpgolioe",
-  "widgetName": "Text3Copy"
+  "widgetId": "ra4s5t4f4g",
+  "widgetName": "Text2"
 }

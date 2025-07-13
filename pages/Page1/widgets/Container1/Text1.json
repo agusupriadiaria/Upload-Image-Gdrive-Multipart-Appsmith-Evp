@@ -1,7 +1,9 @@
 {
   "animateLoading": true,
+  "borderColor": "{{appsmith.theme.colors.backgroundColor}}",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 8,
+  "borderWidth": "0",
+  "bottomRow": 17,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -13,51 +15,45 @@
       "key": "borderRadius"
     },
     {
-      "key": "text"
-    },
-    {
-      "key": "isVisible"
+      "key": "borderColor"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicPropertyPathList": [
-    {
-      "key": "isVisible"
-    }
-  ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "0.875rem",
-  "fontStyle": "",
+  "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": "{{Input1.text === \"\"}}",
-  "key": "c1na6pvism",
-  "leftColumn": 13,
+  "isVisible": true,
+  "key": "iqy9p21vpx",
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
   "mobileBottomRow": 4,
-  "mobileLeftColumn": 13,
-  "mobileRightColumn": 29,
+  "mobileLeftColumn": 6,
+  "mobileRightColumn": 22,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "originalBottomRow": 8,
-  "originalTopRow": 4,
+  "originalBottomRow": 17,
+  "originalTopRow": 13,
   "overflow": "NONE",
-  "parentColumnSpace": 9.0322265625,
-  "parentId": "v0q4npggdz",
+  "parentColumnSpace": 6.21484375,
+  "parentId": "trif218kvk",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 35,
+  "rightColumn": 64,
+  "shouldScrollContents": true,
   "shouldTruncate": false,
-  "text": "{{tinyUrl_0.data.data.tiny_url}}",
-  "textAlign": "LEFT",
+  "text": "File Preview & Link",
+  "textAlign": "CENTER",
   "textColor": "#231F20",
-  "topRow": 4,
+  "topRow": 13,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "8gspzwlwvq",
-  "widgetName": "Text3"
+  "widgetId": "5wv3j254as",
+  "widgetName": "Text1"
 }
